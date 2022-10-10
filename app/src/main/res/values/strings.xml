@@ -1,0 +1,53 @@
+<resources>
+
+    <string name="app_name">Red Salud</string>
+    //MAIN
+    <string name="iniciarSesion">Iniciar sesion</string>
+    <string name="correo">Correo</string>
+    <string name="clave">Contraseña</string>
+    <string name="clave2">Reingrese contraseña</string>
+    <string name="cbRecuerdame">Recuerdame</string>
+    //TEXTO BOTON
+    <string name="textRegistrar">Registrarse</string>
+    <string name="textIniciarSesion">Iniciar sesion</string>
+    //BOTONES
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnContinuar">Continuar</string>
+    <string name="btnCrearCuenta">Crear cuenta</string>
+    <string name="btnEnviar">Enviar</string>
+    <string name="btnAgendarCita">Agendar Cita</string>
+    <string name="btnCalcularIMC">Calcular IMC</string>
+    <string name="btnGuardarCambios">Guardar Cambios</string>
+    //BOTTOMBAR
+    <string name="inicio">Inicio</string>
+    <string name="perfil">Perfil</string>
+    <string name="cita">Cita</string>
+    //MENU LATERAL
+    <string name="datosPersonales">Datos Personales</string>
+    <string name="agendarCita">Agendar Cita</string>
+    <string name="evaluaTuSalud">Evalua tu Salud</string>
+    <string name="centrosDeSalud">Centros de Salud</string>
+    <string name="blog">Blog</string>
+    <string name="soporte">Soporte</string>
+    <string name="cerrarSesion">Cerrar Sesion</string>
+    //HEADER
+    <string name="correoUsuario">usuario@gmail.com</string>
+    //REGISTRO
+    <string name="nombreUsuario">Nombre</string>
+    <string name="apellidoUsuario">Apellido</string>
+    <string name="sexoUsuario">Sexo</string>
+    <string name="fNacUsuario">Fecha nacimiento</string>
+    //SOPORTE
+    <string name="mensaje2">Mensaje...</string>
+    //DRAWER
+    <string name="abrirDrawer">Drawer abierto</string>
+    <string name="cerrarDrawer">Drawer cerrado</string>
+
+    <string name="areaMedica">Area Medica</string>
+    <string name="areaDental">Area Dental</string>
+    //PERFIL
+    <string name="P_nombre">Nombre:</string>
+    <string name="P_apellido">Apellido:</string>
+    <string name="P_correo">Correo:</string>
+
+</resources>

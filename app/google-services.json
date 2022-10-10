@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "797849710732",
+    "project_id": "redsalud-f48e3",
+    "storage_bucket": "redsalud-f48e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797849710732:android:906c501f8635fdcdae8ba9",
+        "android_client_info": {
+          "package_name": "com.example.redsalud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797849710732-un4tvqepnj6p4r3ginf4s2pchou39rlt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg9QQNaIoza_e2zHD_KsS4UAxF_ql2nHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797849710732-un4tvqepnj6p4r3ginf4s2pchou39rlt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

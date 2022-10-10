@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio" >
+
+    <Button
+        android:id="@+id/icon1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="100dp"
+        app:icon="@drawable/agendar_cita"
+        app:iconGravity="top"
+        app:iconSize="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/icon2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="65dp"
+        app:icon="@drawable/evalua_tu_salud"
+        app:iconGravity="top"
+        app:iconSize="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/icon3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        app:icon="@drawable/centros_salud"
+        app:iconGravity="top"
+        app:iconSize="80dp"
+        app:layout_constraintStart_toStartOf="@+id/icon1"
+        app:layout_constraintTop_toBottomOf="@+id/icon1" />
+
+    <Button
+        android:id="@+id/icon4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        app:icon="@drawable/consultar_examen"
+        app:iconGravity="top"
+        app:iconSize="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/icon2"
+        app:layout_constraintTop_toBottomOf="@+id/icon2" />
+
+    <Button
+        android:id="@+id/icon5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
+        app:icon="@drawable/soporte"
+        app:iconGravity="top"
+        app:iconSize="80dp"
+        app:layout_constraintStart_toStartOf="@+id/icon3"
+        app:layout_constraintTop_toBottomOf="@+id/icon3" />
+
+    <TextView
+        android:id="@+id/texticon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="AGENDAR CITA"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon1"
+        app:layout_constraintStart_toStartOf="@+id/icon1"
+        app:layout_constraintTop_toBottomOf="@+id/icon1" />
+
+    <TextView
+        android:id="@+id/texticon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="EVALUAR SALUD"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon2"
+        app:layout_constraintStart_toStartOf="@+id/icon2"
+        app:layout_constraintTop_toBottomOf="@+id/icon2" />
+
+    <TextView
+        android:id="@+id/texticon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="CENTROS SALUD"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon3"
+        app:layout_constraintStart_toStartOf="@+id/icon3"
+        app:layout_constraintTop_toBottomOf="@+id/icon3" />
+
+    <TextView
+        android:id="@+id/texticon4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="EXAMENES"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon4"
+        app:layout_constraintStart_toStartOf="@+id/icon4"
+        app:layout_constraintTop_toBottomOf="@+id/icon4" />
+
+    <TextView
+        android:id="@+id/texticon5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="SOPORTE"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon5"
+        app:layout_constraintStart_toStartOf="@+id/icon5"
+        app:layout_constraintTop_toBottomOf="@+id/icon5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
