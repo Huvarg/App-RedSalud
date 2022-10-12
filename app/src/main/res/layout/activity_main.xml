@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
-    android:onClick="crearCuenta"
     tools:context=".MainActivity">
 
     <ImageView
@@ -24,13 +23,12 @@
         android:id="@+id/correo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:width="300dp"
+        android:layout_marginTop="16dp"
+        android:width="260dp"
         android:ems="10"
         android:hint="@string/correo"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btningresar1"
         app:layout_constraintTop_toBottomOf="@+id/textiniciarsesion" />
 
     <EditText
@@ -38,12 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:width="300dp"
+        android:width="260dp"
         android:ems="10"
         android:hint="@string/clave"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btningresar1"
         app:layout_constraintTop_toBottomOf="@+id/correo" />
 
     <Button
@@ -75,22 +72,40 @@
         android:layout_marginTop="50dp"
         android:background="#FFFFFF"
         android:text="@string/iniciarSesion"
-        android:textColor="@color/indigo_500"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoapp" />
 
-    <TextView
+    <Button
         android:id="@+id/textregistrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:clickable="true"
+        android:layout_marginTop="16dp"
+        android:width="300dp"
+        android:height="50dp"
         android:onClick="crearCuenta"
         android:text="@string/textRegistrar"
-        android:textColor="@color/indigo_500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btningresar1"
         app:layout_constraintTop_toBottomOf="@+id/btningresar1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/correo"
+        app:layout_constraintStart_toStartOf="@+id/btningresar1"
+        app:layout_constraintTop_toTopOf="@+id/correo"
+        app:srcCompat="@drawable/cuenta_box" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clave"
+        app:layout_constraintStart_toStartOf="@+id/btningresar1"
+        app:layout_constraintTop_toTopOf="@+id/clave"
+        app:srcCompat="@drawable/icono_pass" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="Registro"
-        android:textColor="@color/indigo_500"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,41 +65,41 @@
 
     <EditText
         android:id="@+id/r_email"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="30dp"
         android:layout_marginTop="50dp"
         android:background="#E4E4E4"
         android:ems="10"
         android:hint="@string/correo"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/r_btn"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/r_fnac" />
 
     <EditText
         android:id="@+id/r_pass1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="30dp"
         android:layout_marginTop="32dp"
         android:background="#E4E4E4"
         android:ems="10"
         android:hint="@string/clave"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/r_btn"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/r_email" />
 
     <EditText
         android:id="@+id/r_pass2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="30dp"
         android:layout_marginTop="32dp"
         android:background="#E4E4E4"
         android:ems="10"
         android:hint="@string/clave2"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/r_btn"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/r_pass1" />
 
     <Button
@@ -113,16 +113,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/r_pass2" />
 
-    <TextView
+    <Button
         android:id="@+id/r_text_iniciar"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:onClick="iniciarSesion"
         android:text="@string/iniciarSesion"
-        android:textColor="@color/indigo_500"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/r_btn"
         app:layout_constraintTop_toBottomOf="@+id/r_btn" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/r_email"
+        app:layout_constraintStart_toStartOf="@+id/r_fnac"
+        app:layout_constraintTop_toTopOf="@+id/r_email"
+        app:srcCompat="@drawable/cuenta_box" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/r_pass1"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/r_pass1"
+        app:srcCompat="@drawable/icono_pass" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/r_pass2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/r_pass2"
+        app:srcCompat="@drawable/icono_pass" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

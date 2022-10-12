@@ -33,7 +33,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginBottom="29dp"
         android:text="@string/soporte"
-        android:textColor="@color/indigo_500"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/editText1_s"
         app:layout_constraintEnd_toEndOf="parent"
