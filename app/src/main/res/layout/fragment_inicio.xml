@@ -74,11 +74,11 @@
         app:iconGravity="top"
         app:iconSize="50dp"
         app:iconTint="@color/gris"
-        app:layout_constraintBottom_toBottomOf="@+id/icon6"
-        app:layout_constraintStart_toEndOf="@+id/icon6" />
+        app:layout_constraintBottom_toBottomOf="@+id/icon7"
+        app:layout_constraintStart_toEndOf="@+id/icon7" />
 
     <Button
-        android:id="@+id/icon6"
+        android:id="@+id/icon7"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginTop="32dp"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
     <Button
-        android:id="@+id/icon7"
+        android:id="@+id/icon6"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginEnd="40dp"
@@ -102,8 +102,8 @@
         app:iconGravity="top"
         app:iconSize="50dp"
         app:iconTint="@color/gris"
-        app:layout_constraintBottom_toBottomOf="@+id/icon6"
-        app:layout_constraintEnd_toStartOf="@+id/icon6" />
+        app:layout_constraintBottom_toBottomOf="@+id/icon7"
+        app:layout_constraintEnd_toStartOf="@+id/icon7" />
 
     <TextView
         android:id="@+id/texticon1"
@@ -199,18 +199,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="GALERIA"
-        app:layout_constraintEnd_toEndOf="@+id/icon6"
-        app:layout_constraintStart_toStartOf="@+id/icon6"
-        app:layout_constraintTop_toBottomOf="@+id/icon6" />
+        app:layout_constraintEnd_toEndOf="@+id/icon7"
+        app:layout_constraintStart_toStartOf="@+id/icon7"
+        app:layout_constraintTop_toBottomOf="@+id/icon7" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="NOTICIAS"
-        app:layout_constraintEnd_toEndOf="@+id/icon7"
-        app:layout_constraintStart_toStartOf="@+id/icon7"
-        app:layout_constraintTop_toBottomOf="@+id/icon7" />
+        android:text="NOTICIA"
+        app:layout_constraintEnd_toEndOf="@+id/icon6"
+        app:layout_constraintStart_toStartOf="@+id/icon6"
+        app:layout_constraintTop_toBottomOf="@+id/icon6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

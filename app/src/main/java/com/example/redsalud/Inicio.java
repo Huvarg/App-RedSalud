@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class Inicio extends Fragment {
 
-    Button icon1, icon2, icon3, icon4, icon5;
+    Button icon1, icon2, icon3, icon4, icon5, icon6;
 
     public  static  Inicio newInstance() {
         return new Inicio();}
@@ -94,6 +94,19 @@ public class Inicio extends Fragment {
                 transaction.replace(R.id.contenedor, Soporte.newInstance());
                 transaction.commit();
                 Toast.makeText(getActivity().getApplication(), "Vas a soporte", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        icon6 = vista.findViewById(R.id.icon6);
+        icon6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                transaction.setReorderingAllowed(true);
+                transaction.replace(R.id.contenedor, ForoNoticia.newInstance());
+                transaction.commit();
+                Toast.makeText(getActivity().getApplication(), "Vas a noticia", Toast.LENGTH_SHORT).show();
             }
         });
         return vista;

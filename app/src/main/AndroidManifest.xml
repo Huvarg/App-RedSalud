@@ -15,6 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RedSalud">
+        <activity
+            android:name=".DetalleNoticia"
+            android:exported="false" />
+        <activity
+            android:name=".DetallePersona"
+            android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -29,12 +35,6 @@
 
         <activity
             android:name=".RegistrarCuentaDetalle"
-            android:exported="false" />
-        <activity
-            android:name=".AgendarCitaDetalle"
-            android:exported="false" />
-        <activity
-            android:name=".OlvidarCuenta"
             android:exported="false" />
         <activity
             android:name=".RegistrarCuenta"

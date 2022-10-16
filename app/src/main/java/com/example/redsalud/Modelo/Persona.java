@@ -8,12 +8,14 @@ public class Persona implements Serializable {
     private String nombre;
     private String apellido;
     private String especialidad;
+    private String areamedica;
 
-    public Persona(String ruta, String nombre, String apellido, String especialidad) {
+    public Persona(String ruta, String nombre, String apellido, String especialidad, String areamedica) {
         this.ruta = ruta;
         this.nombre = nombre;
         this.apellido = apellido;
         this.especialidad = especialidad;
+        this.areamedica = areamedica;
     }
 
     public String getRuta() {
@@ -46,6 +48,14 @@ public class Persona implements Serializable {
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
+    }
+
+    public String getAreamedica() {
+        return areamedica;
+    }
+
+    public void setAreamedica(String areamedica) {
+        this.areamedica = areamedica;
     }
 
 }

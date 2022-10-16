@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.bumptech.glide.Glide;
 import com.example.redsalud.R;
 import com.example.redsalud.Modelo.Persona;
@@ -41,8 +40,8 @@ public class AdaptadorP extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         view = LayoutInflater.from(contexto).inflate(R.layout.items_listview_p,null);
-        ImageView imgp = (ImageView) view.findViewById(R.id.imgp);
-        TextView textnombre = (TextView) view.findViewById(R.id.textnombre);
+        ImageView imgp = (ImageView) view.findViewById(R.id.img_p);
+        TextView textnombre = (TextView) view.findViewById(R.id.textnommbre);
         TextView textapellido = (TextView) view.findViewById(R.id.textapellido);
         TextView textespecialidad = (TextView) view.findViewById(R.id.textespecialidad);
         Persona p = (Persona) getItem(position);

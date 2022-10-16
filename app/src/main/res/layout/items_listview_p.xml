@@ -6,7 +6,7 @@
     android:layout_height="200dp">
 
     <ImageView
-        android:id="@+id/imgp"
+        android:id="@+id/img_p"
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
@@ -21,7 +21,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textnombre"
+            android:id="@+id/textnommbre"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

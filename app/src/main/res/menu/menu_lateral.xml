@@ -19,16 +19,12 @@
                 android:id="@+id/op04"
                 android:icon="@drawable/centros_salud"
                 android:title="@string/centrosDeSalud" />
-            <item
-                android:id="@+id/op05"
-                android:icon="@drawable/blog"
-                android:title="@string/blog" />
         </menu>
     </item>
     <item android:title="Opciones">
         <menu>
             <item
-                android:id="@+id/op06"
+                android:id="@+id/op05"
                 android:icon="@drawable/cerrar_sesion"
                 android:title="@string/cerrarSesion" />
         </menu>

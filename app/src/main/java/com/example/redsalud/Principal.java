@@ -91,10 +91,6 @@ public class Principal extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,c).commit();
                     Toast.makeText(getApplicationContext(), "Vas a centros de salud", Toast.LENGTH_SHORT).show();
                 } else if(id==R.id.op05){
-                    Blog b = new Blog();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,b).commit();
-                    Toast.makeText(getApplicationContext(), "Vas a blog", Toast.LENGTH_SHORT).show();
-                } else if(id==R.id.op06){
                     SharedPreferences datos = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     SharedPreferences.Editor editor = datos.edit();
                     editor.remove("correo");
