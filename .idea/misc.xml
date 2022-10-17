@@ -16,23 +16,29 @@
         <entry key="..\:/RedSalud/app/src/main/res/layout/activity_detalle_noticia.xml" value="0.23999999479814021" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/activity_detalle_persona.xml" value="0.23999999479814021" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/activity_main.xml" value="0.22010869565217392" />
-        <entry key="..\:/RedSalud/app/src/main/res/layout/activity_principal.xml" value="0.20108695652173914" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/activity_principal.xml" value="0.35999999219721035" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/activity_registrar_cuenta.xml" value="0.22010869565217392" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/activity_registrar_cuenta_detalle.xml" value="0.22010869565217392" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/bottombar.xml" value="0.19882246376811594" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/centro_medico_lista.xml" value="0.20380434782608695" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_agendar_cita.xml" value="0.192481884057971" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_area_medica.xml" value="0.20425724637681159" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_blog.xml" value="0.18795289855072464" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_centro_medico_lista.xml" value="0.35999999219721035" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_centros_salud.xml" value="0.21557971014492755" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_detalle_area_persona.xml" value="0.17119565217391305" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_detalle_persona.xml" value="0.13019250253292808" />
-        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_evaluar_salud.xml" value="0.22010869565217392" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_evaluar_g_c_b.xml" value="0.2727272668160684" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_evaluar_i_m_c.xml" value="0.35999999219721035" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_evaluar_salud.xml" value="0.23999999479814021" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_examenes.xml" value="0.22010869565217392" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_foro_noticia.xml" value="0.20425724637681159" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_inicio.xml" value="0.20108695652173914" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_noticia.xml" value="0.1947463768115942" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_perfil.xml" value="0.20108695652173914" />
-        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_soporte.xml" value="0.22010869565217392" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/fragment_soporte.xml" value="0.35999999219721035" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/header.xml" value="0.22010869565217392" />
+        <entry key="..\:/RedSalud/app/src/main/res/layout/items_listview_cs.xml" value="0.21557971014492755" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/items_listview_n.xml" value="0.192481884057971" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/items_listview_p.xml" value="0.2727272668160684" />
         <entry key="..\:/RedSalud/app/src/main/res/layout/toolbar.xml" value="0.22010869565217392" />

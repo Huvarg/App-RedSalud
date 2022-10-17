@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class Perfil extends Fragment {
 
@@ -16,6 +17,9 @@ public class Perfil extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TextView titleToolbar = getActivity().findViewById(R.id.toolbarName);
+        titleToolbar.setText("Perfil");
     }
 
     @Override

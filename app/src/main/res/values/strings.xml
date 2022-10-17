@@ -33,12 +33,13 @@
     //HEADER
     <string name="correoUsuario">usuario@gmail.com</string>
     //REGISTRO
-    <string name="nombreUsuario">Nombre</string>
+    <string name="nombreUsuario">R.U.T</string>
     <string name="apellidoUsuario">Apellido</string>
     <string name="sexoUsuario">Sexo</string>
     <string name="fNacUsuario">Fecha nacimiento</string>
     //SOPORTE
     <string name="mensaje2">Mensaje...</string>
+    <string name="email">EMAIL</string>
     //DRAWER
     <string name="abrirDrawer">Drawer abierto</string>
     <string name="cerrarDrawer">Drawer cerrado</string>

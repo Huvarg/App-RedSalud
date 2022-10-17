@@ -7,34 +7,26 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-public class Soporte extends Fragment {
+public class EvaluarGCB extends Fragment {
 
-    private TextView titleToolbar;
-
-    public Soporte() {
+    public EvaluarGCB() {
     }
 
-    public static Soporte newInstance() {
-        Soporte fragment = new Soporte();
+    public static EvaluarGCB newInstance() {
+        EvaluarGCB fragment = new EvaluarGCB();
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        TextView titleToolbar = getActivity().findViewById(R.id.toolbarName);
-        titleToolbar.setText("Soporte");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_soporte, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_evaluar_g_c_b, container, false);
     }
 
 }

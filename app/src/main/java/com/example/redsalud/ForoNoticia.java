@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -34,6 +35,9 @@ public class ForoNoticia extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_foro_noticia, container, false);
+
+        TextView titleToolbar = getActivity().findViewById(R.id.toolbarName);
+        titleToolbar.setText("Noticias");
 
         ListView l = (ListView) view.findViewById(R.id.lvNoticia);
         AdaptadorN adaptadorN = new AdaptadorN(getContext(),cargar_datos());

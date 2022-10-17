@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Inicio extends Fragment {
@@ -31,6 +32,9 @@ public class Inicio extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_inicio, container, false);
+
+        TextView titleToolbar = getActivity().findViewById(R.id.toolbarName);
+        titleToolbar.setText("Menu");
 
         icon1 = vista.findViewById(R.id.icon1);
         icon1.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +69,7 @@ public class Inicio extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedor, CentrosSalud.newInstance());
+                transaction.replace(R.id.contenedor, CentroMedicoLista.newInstance());
                 transaction.commit();
                 Toast.makeText(getActivity().getApplication(), "Vas a centros salud", Toast.LENGTH_SHORT).show();
             }

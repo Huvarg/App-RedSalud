@@ -10,35 +10,21 @@
 
     <EditText
         android:id="@+id/EmailAddress1_s"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="65dp"
+        android:layout_marginEnd="40dp"
         android:background="#E4E4E4"
         android:ems="10"
-        android:hint="@string/apellidoUsuario"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:paddingLeft="10dp"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/editText1_s" />
-
-    <TextView
-        android:id="@+id/textView1_s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="29dp"
-        android:text="@string/soporte"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText1_s"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button1_s"
@@ -52,10 +38,11 @@
 
     <EditText
         android:id="@+id/editText1_s"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginEnd="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="24dp"
         android:background="#E4E4E4"
         android:ems="10"
@@ -65,14 +52,16 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/EmailAddress1_s"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1_s" />
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2_s"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="300dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
         android:background="#E4E4E4"
         android:paddingLeft="10dp"
         android:text="Mensaje..."
@@ -81,5 +70,27 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailAddress1_s" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="R.U.T"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/editText1_s"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText1_s" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="EMAIL"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/EmailAddress1_s"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/EmailAddress1_s" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
