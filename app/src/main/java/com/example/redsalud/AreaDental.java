@@ -2,6 +2,8 @@ package com.example.redsalud;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +12,21 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.example.redsalud.Adaptadores.AdaptadorP;
-import com.example.redsalud.Modelo.Persona;
+import com.example.redsalud.Modelo.Profesional;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
 
 public class AreaDental extends Fragment {
-    private ArrayList<Persona> listado;
-    Persona p;
+
+    private FirebaseFirestore firestore;
+    private Profesional p;
+    private ListView listV;
+    private ArrayList <Profesional> listadoP;
 
     public AreaDental() {
     }
@@ -35,29 +46,48 @@ public class AreaDental extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_area_dental, container, false);
 
-        ListView l = (ListView) view.findViewById(R.id.listaAreaDental);
-        AdaptadorP adaptadorP = new AdaptadorP(getContext(),cargarListado());
-        l.setAdapter(adaptadorP);
+        listadoP = new ArrayList<>();
+        p = new Profesional();
+        listV = view.findViewById(R.id.listaAreaDental);
+        AdaptadorP adaptadorP = new AdaptadorP(getContext(), listadoP);
 
-        l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        firestore = FirebaseFirestore.getInstance();
+        firestore.collection("Profesional")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            listadoP.clear();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                String ruta = document.getString("ruta");
+                                String nombre = document.getString("nombre");
+                                String apellido = document.getString("apellido");
+                                String especialidad = document.getString("especialidad");
+                                String areaMedica = document.getString("areaMedica");
+                                Profesional p = new Profesional(ruta, nombre, apellido, especialidad, areaMedica);
+                                if (areaMedica.equals("Area Dental")) {
+                                    listadoP.add(p);
+                                    listV.setAdapter(adaptadorP);
+                                }
+                            }
+                        } else {
+                            System.out.println("Error: " + task.getException());
+                        }
+                    }
+                });
+
+        listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Persona p = listado.get(position);
+                Profesional p = listadoP.get(position);
                 Toast.makeText(getActivity(), "Selecciono a: "+p.getNombre()+" "+p.getApellido(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(),DetallePersona.class);
-                intent.putExtra("persona",p);
+                Intent intent = new Intent(getActivity(), DetalleProfesional.class);
+                intent.putExtra("profesional",p);
                 startActivity(intent);
             }
         });
         return view;
-    }
-
-    public ArrayList<Persona> cargarListado() {
-        listado = new ArrayList<>();
-        listado.add(new Persona("https://firebasestorage.googleapis.com/v0/b/redsalud-f48e3.appspot.com/o/Personal%2FDr-400x400.jpg?alt=media&token=8ca09d8c-bf8a-4bf0-a97e-3258820bb6e3","Cristian","Araya Araya","Odontologo","Area Dental"));
-        listado.add(new Persona("https://firebasestorage.googleapis.com/v0/b/redsalud-f48e3.appspot.com/o/Personal%2FDra-400x400.jpg?alt=media&token=0ea98d4c-161f-4630-b9b6-6fa97264f545","Sara","Lopez Fuentes","Odontologo","Area Dental"));
-        listado.add(new Persona("https://firebasestorage.googleapis.com/v0/b/redsalud-f48e3.appspot.com/o/Personal%2FDra-400x400.jpg?alt=media&token=0ea98d4c-161f-4630-b9b6-6fa97264f545","Cristina","Mamani","Odontologo","Area Dental"));
-        return listado;
     }
 
 }

@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -87,7 +86,7 @@ public class Principal extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,e).commit();
                     Toast.makeText(getApplicationContext(), "Vas a evalua tu salud", Toast.LENGTH_SHORT).show();
                 } else if(id==R.id.op04){
-                    CentrosSalud c = new CentrosSalud();
+                    CentroMedicoLista c = new CentroMedicoLista();
                     getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,c).commit();
                     Toast.makeText(getApplicationContext(), "Vas a centros de salud", Toast.LENGTH_SHORT).show();
                 } else if(id==R.id.op05){

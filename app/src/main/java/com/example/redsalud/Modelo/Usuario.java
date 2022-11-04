@@ -1,35 +1,17 @@
 package com.example.redsalud.Modelo;
 
-import java.io.Serializable;
+public class Usuario {
 
-public class Usuario implements Serializable {
-
-    private Integer id;
     private String nombre;
     private String apellido;
-    private String sexo;
-    private String fNac;
     private String correo;
-    private String pass1;
-    private String pass2;
+    private String pass;
 
-    public Usuario(Integer id, String nombre, String apellido, String sexo, String fNac, String correo, String pass1, String pass2) {
-        this.id = id;
+    public Usuario(String nombre, String apellido, String correo, String pass) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.sexo = sexo;
-        this.fNac = fNac;
         this.correo = correo;
-        this.pass1 = pass1;
-        this.pass2 = pass2;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+        this.pass = pass;
     }
 
     public String getNombre() {
@@ -48,22 +30,6 @@ public class Usuario implements Serializable {
         this.apellido = apellido;
     }
 
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getfNac() {
-        return fNac;
-    }
-
-    public void setfNac(String fNac) {
-        this.fNac = fNac;
-    }
-
     public String getCorreo() {
         return correo;
     }
@@ -72,20 +38,12 @@ public class Usuario implements Serializable {
         this.correo = correo;
     }
 
-    public String getPass1() {
-        return pass1;
+    public String getPass() {
+        return pass;
     }
 
-    public void setPass1(String pass1) {
-        this.pass1 = pass1;
-    }
-
-    public String getPass2() {
-        return pass2;
-    }
-
-    public void setPass2(String pass2) {
-        this.pass2 = pass2;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
 }

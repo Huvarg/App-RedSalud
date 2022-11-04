@@ -9,6 +9,9 @@ public class Noticia implements Serializable {
     private String titulo;
     private String contenido;
 
+    public Noticia() {
+    }
+
     public Noticia(String tipo, String rutaimg, String titulo, String contenido) {
         this.tipo = tipo;
         this.rutaimg = rutaimg;

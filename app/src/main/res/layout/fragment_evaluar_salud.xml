@@ -7,29 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".EvaluarSalud" >
 
-    <TextView
-        android:id="@+id/btnMasaCorporal"
-        android:layout_width="205dp"
-        android:layout_height="50dp"
-        android:background="#989898"
-        android:gravity="center"
-        android:text="MASA CORPORAL"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/btnGastoCalorico"
-        android:layout_width="205dp"
-        android:layout_height="50dp"
-        android:background="#989898"
-        android:gravity="center"
-        android:text="GASTO CALORICO"
-        android:textSize="16sp"
-        android:textStyle="bold"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutES"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVALUAR IMC" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVALUAR GCB" />
+
+    </com.google.android.material.tabs.TabLayout>
 
     <LinearLayout
         android:id="@+id/contenedorCalculos"
@@ -37,7 +33,7 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMasaCorporal"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutES"
         tools:layout_editor_absoluteX="0dp">
 
     </LinearLayout>

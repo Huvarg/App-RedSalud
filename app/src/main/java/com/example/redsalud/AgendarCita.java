@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,11 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class AgendarCita extends Fragment {
+import com.google.android.material.tabs.TabLayout;
 
-    Button btnAreaMedica;
-    Button btnAreaDental;
-    private AgendarCita nViewModel;
+public class AgendarCita extends Fragment {
 
     public  static  AgendarCita newInstance() {
         return new AgendarCita();}
@@ -32,26 +28,42 @@ public class AgendarCita extends Fragment {
         TextView titleToolbar = getActivity().findViewById(R.id.toolbarName);
         titleToolbar.setText("Agendar Cita");
 
-        btnAreaMedica = vista.findViewById(R.id.btnAreaMedica);
-        btnAreaMedica.setOnClickListener(new View.OnClickListener() {
+        Fragment fragmento = new AreaMedica();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.contenedorFragment, fragmento);
+        fragmentTransaction.commit();
+
+        //Tablayout
+        TabLayout tl = (TabLayout)  vista.findViewById(R.id.tabLayoutAC);
+        tl.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedorFragment, AreaMedica.newInstance());
-                transaction.commit();
+            public void onTabSelected(TabLayout.Tab tab) {
+                int position = tab.getPosition();
+                switch (position) {
+                    case 0:
+                        Fragment fragmento1 = new AreaMedica();
+                        FragmentManager fragmentManager1 = getActivity().getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction1 = fragmentManager1.beginTransaction();
+                        fragmentTransaction1.replace(R.id.contenedorFragment, fragmento1);
+                        fragmentTransaction1.commit();
+                        break;
+                    case 1:
+                        Fragment fragmento2 = new AreaDental();
+                        FragmentManager fragmentManager2 = getActivity().getSupportFragmentManager();
+                        FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
+                        fragmentTransaction2.replace(R.id.contenedorFragment, fragmento2);
+                        fragmentTransaction2.commit();
+                        break;
+                }
             }
-        });
-        btnAreaDental = vista.findViewById(R.id.btnAreaDental);
-        btnAreaDental.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedorFragment, AreaDental.newInstance());
-                transaction.commit();
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
             }
         });
         return vista;

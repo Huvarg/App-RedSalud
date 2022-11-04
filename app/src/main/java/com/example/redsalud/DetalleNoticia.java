@@ -9,15 +9,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.redsalud.Modelo.Noticia;
-import com.example.redsalud.Modelo.Persona;
 
 public class DetalleNoticia extends AppCompatActivity {
 
-    private Noticia n;
     private ImageView urlFoto;
-    private TextView titulo;
-    private TextView contenico;
-    private TextView tipo;
+    private TextView titulo, contenico, tipo;
+    private Noticia n;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class Inicio extends Fragment {
 
-    Button icon1, icon2, icon3, icon4, icon5, icon6;
+    private Button icon1, icon2, icon3, icon4, icon5, icon6;
 
     public  static  Inicio newInstance() {
         return new Inicio();}

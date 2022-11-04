@@ -8,16 +8,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
+import com.example.redsalud.Modelo.Profesional;
 import com.example.redsalud.R;
-import com.example.redsalud.Modelo.Persona;
 
 import java.util.ArrayList;
 
 public class AdaptadorP extends BaseAdapter {
     private Context contexto;
-    private ArrayList<Persona> listItems;
+    private ArrayList<Profesional> listItems;
 
-    public AdaptadorP(Context contexto, ArrayList<Persona> listItems) {
+    public AdaptadorP(Context contexto, ArrayList<Profesional> listItems) {
         this.contexto = contexto;
         this.listItems = listItems;
     }
@@ -44,7 +44,7 @@ public class AdaptadorP extends BaseAdapter {
         TextView textnombre = (TextView) view.findViewById(R.id.textnommbre);
         TextView textapellido = (TextView) view.findViewById(R.id.textapellido);
         TextView textespecialidad = (TextView) view.findViewById(R.id.textespecialidad);
-        Persona p = (Persona) getItem(position);
+        Profesional p = (Profesional) getItem(position);
         Glide.with(contexto)
                 .load(p.getRuta())
                 .centerCrop()

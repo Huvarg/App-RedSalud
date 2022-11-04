@@ -12,7 +12,7 @@
         android:id="@+id/logoapp"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:ems="10"
         android:hint="@string/correo"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/btningresar1"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresar"
         app:layout_constraintTop_toBottomOf="@+id/textiniciarsesion" />
 
     <EditText
@@ -40,24 +40,23 @@
         android:ems="10"
         android:hint="@string/clave"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/btningresar1"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresar"
         app:layout_constraintTop_toBottomOf="@+id/correo" />
 
     <Button
-        android:id="@+id/btningresar1"
+        android:id="@+id/btnIngresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:width="300dp"
-        android:height="50dp"
-        android:onClick="iniciarSesion"
-        android:text="@string/btnIngresar"
+        android:onClick="onClick"
+        android:text="@string/BTNIngresar"
+        app:layout_constraintBottom_toTopOf="@+id/btnCrearUsuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbrecuerdame" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/cbrecuerdame"
+        android:id="@+id/cbRecuerdame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -69,7 +68,7 @@
         android:id="@+id/textiniciarsesion"
         android:layout_width="199dp"
         android:layout_height="46dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:background="#FFFFFF"
         android:text="@string/iniciarSesion"
         android:textColor="@color/black"
@@ -79,23 +78,23 @@
         app:layout_constraintTop_toBottomOf="@+id/logoapp" />
 
     <Button
-        android:id="@+id/textregistrarse"
+        android:id="@+id/btnCrearUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp"
         android:width="300dp"
         android:height="50dp"
-        android:onClick="crearCuenta"
-        android:text="@string/textRegistrar"
-        app:layout_constraintStart_toStartOf="@+id/btningresar1"
-        app:layout_constraintTop_toBottomOf="@+id/btningresar1" />
+        android:onClick="onClick"
+        android:text="@string/BTNRegistro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresar" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="33dp"
         android:layout_height="33dp"
         app:layout_constraintBottom_toBottomOf="@+id/correo"
-        app:layout_constraintStart_toStartOf="@+id/btningresar1"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresar"
         app:layout_constraintTop_toTopOf="@+id/correo"
         app:srcCompat="@drawable/cuenta_box" />
 
@@ -104,7 +103,7 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="@+id/clave"
-        app:layout_constraintStart_toStartOf="@+id/btningresar1"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresar"
         app:layout_constraintTop_toTopOf="@+id/clave"
         app:srcCompat="@drawable/icono_pass" />
 

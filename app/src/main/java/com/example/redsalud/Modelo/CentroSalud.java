@@ -8,6 +8,9 @@ public class CentroSalud implements Serializable {
     private Double lat;
     private Double log;
 
+    public CentroSalud() {
+    }
+
     public CentroSalud(String nombreCentro, Double lat, Double log) {
         this.nombreCentro = nombreCentro;
         this.lat = lat;

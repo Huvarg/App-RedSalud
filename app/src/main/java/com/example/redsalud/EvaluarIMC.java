@@ -13,10 +13,10 @@ import android.widget.TextView;
 
 public class EvaluarIMC extends Fragment {
 
-    EditText etPeso;
-    EditText etAltura;
-    TextView tvResultado;
-    Button bntCalcular;
+    private EditText etPeso;
+    private EditText etAltura;
+    private TextView tvResultado;
+    private Button bntCalcular;
 
     public EvaluarIMC() {
     }
@@ -43,6 +43,7 @@ public class EvaluarIMC extends Fragment {
         etAltura = view.findViewById(R.id.etAltura2);
         tvResultado = view.findViewById(R.id.tvResultado2);
         bntCalcular = view.findViewById(R.id.btnCalcularIMC2);
+
         bntCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

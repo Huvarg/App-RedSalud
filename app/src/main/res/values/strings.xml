@@ -7,13 +7,15 @@
     <string name="clave">Contraseña</string>
     <string name="clave2">Reingrese contraseña</string>
     <string name="cbRecuerdame">Recuerdame</string>
-    //TEXTO BOTON
-    <string name="textRegistrar">Registrarse</string>
-    <string name="textIniciarSesion">Iniciar sesion</string>
+    <string name="BTNIngresar">Iniciar Sesion</string>
+    //REGISTRO
+    <string name="RegistroTitulo">Registro</string>
+    <string name="NombreUsuario">Ingrese un nombre</string>
+    <string name="ApellidoUsuario">Ingrese un apellido</string>
+    <string name="EmailUsuario">Ingrese un email</string>
+    <string name="PassUsuario">Ingrese un password</string>
+    <string name="BTNRegistro">Registrar Usuario</string>
     //BOTONES
-    <string name="btnIngresar">Ingresar</string>
-    <string name="btnContinuar">Continuar</string>
-    <string name="btnCrearCuenta">Crear cuenta</string>
     <string name="btnEnviar">Enviar</string>
     <string name="btnAgendarCita">Agendar Cita</string>
     <string name="btnCalcularIMC">Calcular IMC</string>
@@ -31,12 +33,7 @@
     <string name="soporte">Soporte</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     //HEADER
-    <string name="correoUsuario">usuario@gmail.com</string>
-    //REGISTRO
-    <string name="nombreUsuario">R.U.T</string>
-    <string name="apellidoUsuario">Apellido</string>
-    <string name="sexoUsuario">Sexo</string>
-    <string name="fNacUsuario">Fecha nacimiento</string>
+    <string name="correoUsuario">correo@gmail.com</string>
     //SOPORTE
     <string name="mensaje2">Mensaje...</string>
     <string name="email">EMAIL</string>
@@ -51,15 +48,5 @@
     <string name="P_apellido">Apellido:</string>
     <string name="P_correo">Correo:</string>
     <string name="title_activity_detalle_persona">DetallePersona</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -2,20 +2,23 @@ package com.example.redsalud.Modelo;
 
 import java.io.Serializable;
 
-public class Persona implements Serializable {
+public class Profesional implements Serializable {
 
     private String ruta;
     private String nombre;
     private String apellido;
     private String especialidad;
-    private String areamedica;
+    private String areaMedica;
 
-    public Persona(String ruta, String nombre, String apellido, String especialidad, String areamedica) {
+    public Profesional() {
+    }
+    
+    public Profesional(String ruta, String nombre, String apellido, String especialidad, String areaMedica) {
         this.ruta = ruta;
         this.nombre = nombre;
         this.apellido = apellido;
         this.especialidad = especialidad;
-        this.areamedica = areamedica;
+        this.areaMedica = areaMedica;
     }
 
     public String getRuta() {
@@ -50,12 +53,12 @@ public class Persona implements Serializable {
         this.especialidad = especialidad;
     }
 
-    public String getAreamedica() {
-        return areamedica;
+    public String getAreaMedica() {
+        return areaMedica;
     }
 
-    public void setAreamedica(String areamedica) {
-        this.areamedica = areamedica;
+    public void setAreaMedica(String areaMedica) {
+        this.areaMedica = areaMedica;
     }
 
 }

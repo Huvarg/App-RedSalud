@@ -8,11 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.example.redsalud.Modelo.CentroSalud;
-import com.example.redsalud.Modelo.Persona;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,12 +16,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class CentrosSalud extends Fragment {
+public class CentroSaludMap extends Fragment {
 
-    //private CentroSalud c;
-
-    public static CentrosSalud newInstance() {
-        CentrosSalud fragment = new CentrosSalud();
+    public static CentroSaludMap newInstance() {
+        CentroSaludMap fragment = new CentroSaludMap();
         return fragment;
     }
 
@@ -33,14 +27,20 @@ public class CentrosSalud extends Fragment {
 
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            //Bundle paquete = getActivity().getIntent().getExtras();
-            //if(paquete!=null) {
-                //c = (CentroSalud) paquete.getSerializable("centro");
-                LatLng centroSalud1 = new LatLng(-27.37353333, -70.32269167);
-                googleMap.addMarker(new MarkerOptions().position(centroSalud1).title("Hospital Regional Copiapó San José"));
-                googleMap.moveCamera(CameraUpdateFactory.newLatLng(centroSalud1));
+
+            Bundle datosRecuperados = getArguments();
+            if(datosRecuperados!=null){
+                String nombre = datosRecuperados.getString("nombre");
+                Double lat = datosRecuperados.getDouble("lat");
+                Double log = datosRecuperados.getDouble("log");
+                LatLng centroMedico = new LatLng(lat, log);
+                googleMap.addMarker(new MarkerOptions().position(centroMedico).title(nombre));
+                googleMap.moveCamera(CameraUpdateFactory.newLatLng(centroMedico));
+
+                float zoomLevel = 16;
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(centroMedico, zoomLevel));
             }
-        //}
+        }
     };
 
     @Nullable
@@ -48,7 +48,7 @@ public class CentrosSalud extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_centros_salud, container, false);
+        return inflater.inflate(R.layout.fragment_centro_salud_map, container, false);
     }
 
     @Override
