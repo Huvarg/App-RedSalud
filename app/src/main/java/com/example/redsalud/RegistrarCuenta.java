@@ -81,7 +81,7 @@ public class RegistrarCuenta extends AppCompatActivity implements View.OnClickLi
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             String id = auth.getCurrentUser().getUid();
-                            Usuario u = new Usuario(nombre, apellido, email, password);
+                            Usuario u = new Usuario("", nombre, apellido, email, password);
                             database.child("Usuarios").child(id).setValue(u);
                             Toast.makeText(RegistrarCuenta.this, "Se ha registrado con exito, ya puede iniciar sesion", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(RegistrarCuenta.this, MainActivity.class);

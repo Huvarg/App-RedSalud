@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -92,7 +93,9 @@ public class Principal extends AppCompatActivity {
                 } else if(id==R.id.op05){
                     SharedPreferences datos = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     SharedPreferences.Editor editor = datos.edit();
-                    editor.remove("correo");
+                    editor.remove("idUser");
+                    Intent intent = new Intent(getApplication(), MainActivity.class);
+                    startActivity(intent);
                     editor.apply();
                     finish();
                 }

@@ -4,9 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.Checkable;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -51,6 +55,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            CheckBox cbrecuerdame = (CheckBox) findViewById(R.id.cbRecuerdame);
+                            boolean chequeado = cbrecuerdame.isChecked();
+                            if (chequeado==true) {
+                                SharedPreferences datos = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                                SharedPreferences.Editor editor = datos.edit();
+                                editor.putString("idUser", email);
+                                editor.commit();
+                            }
                             Toast.makeText(MainActivity.this,"Bienvenido", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplication(), Principal.class);
                             startActivity(intent);
@@ -60,6 +72,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 });
+    }
+
+    //Metodo para sesion activa
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences datos = PreferenceManager.getDefaultSharedPreferences(this);
+        String idUser = datos.getString("idUser", "");
+        if (!idUser.equals("")) {
+            Toast.makeText(MainActivity.this,"Bienvenido", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getApplication(), Principal.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     //Metodo para los botones
