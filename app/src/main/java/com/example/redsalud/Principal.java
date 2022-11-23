@@ -57,14 +57,12 @@ public class Principal extends AppCompatActivity {
                 int position = tab.getPosition();
                 switch (position) {
                     case 0:
+                        Toast.makeText(getApplicationContext(), "Volver atras", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
                         Inicio i = new Inicio();
                         getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,i).commit();
                         Toast.makeText(getApplicationContext(), "Vas a inicio", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 1:
-                        Perfil p = new Perfil();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,p).commit();
-                        Toast.makeText(getApplicationContext(), "Vas a perfil", Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
                         ProfesionalArea a = new ProfesionalArea();
@@ -96,7 +94,7 @@ public class Principal extends AppCompatActivity {
                 } else if(id==R.id.op02){
                     ProfesionalArea a = new ProfesionalArea();
                     getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,a).commit();
-                    Toast.makeText(getApplicationContext(), "Vas a agendar cita", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Vas a listado de profesionales", Toast.LENGTH_SHORT).show();
                 } else if(id==R.id.op03){
                     CentroMedicoLista c = new CentroMedicoLista();
                     getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,c).commit();

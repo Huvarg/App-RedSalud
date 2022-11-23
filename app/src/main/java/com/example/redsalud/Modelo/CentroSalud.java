@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class CentroSalud implements Serializable {
 
-    private String key;
+    private String idCentroSalud;
     private String nombre;
     private Double lat;
     private Double log;
@@ -12,19 +12,19 @@ public class CentroSalud implements Serializable {
     public CentroSalud() {
     }
 
-    public CentroSalud(String key, String nombre, Double lat, Double log) {
-        this.key = key;
+    public CentroSalud(String idCentroSalud, String nombre, Double lat, Double log) {
+        this.idCentroSalud = idCentroSalud;
         this.nombre = nombre;
         this.lat = lat;
         this.log = log;
     }
 
-    public String getKey() {
-        return key;
+    public String getIdCentroSalud() {
+        return idCentroSalud;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setIdCentroSalud(String idCentroSalud) {
+        this.idCentroSalud = idCentroSalud;
     }
 
     public String getNombre() {
@@ -49,6 +49,11 @@ public class CentroSalud implements Serializable {
 
     public void setLog(Double log) {
         this.log = log;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 
 }

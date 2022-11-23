@@ -10,13 +10,9 @@
             <item
                 android:id="@+id/op02"
                 android:icon="@drawable/agendar_cita"
-                android:title="@string/agendarCita" />
+                android:title="@string/listadoProfesionales" />
             <item
                 android:id="@+id/op03"
-                android:icon="@drawable/evalua_tu_salud"
-                android:title="@string/evaluaTuSalud" />
-            <item
-                android:id="@+id/op04"
                 android:icon="@drawable/centros_salud"
                 android:title="@string/centrosDeSalud" />
         </menu>
@@ -24,7 +20,7 @@
     <item android:title="Opciones">
         <menu>
             <item
-                android:id="@+id/op05"
+                android:id="@+id/op04"
                 android:icon="@drawable/cerrar_sesion"
                 android:title="@string/cerrarSesion" />
         </menu>

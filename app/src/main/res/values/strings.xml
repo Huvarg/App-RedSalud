@@ -26,16 +26,13 @@
 
     //BOTTOMBAR
     <string name="inicio">Inicio</string>
-    <string name="perfil">Perfil</string>
+    <string name="volver">Volver</string>
     <string name="cita">Cita</string>
 
     //MENU LATERAL
     <string name="datosPersonales">Datos Personales</string>
-    <string name="agendarCita">Agendar Cita</string>
-    <string name="evaluaTuSalud">Evalua tu Salud</string>
+    <string name="listadoProfesionales">Listado Profesionales</string>
     <string name="centrosDeSalud">Centros de Salud</string>
-    <string name="blog">Blog</string>
-    <string name="soporte">Soporte</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
 
     //HEADER
@@ -57,9 +54,9 @@
     //ADD PROFESIONAL
     <string name="NombreP">Nombre:</string>
     <string name="ApellidoP">Apellido:</string>
+    <string name="Genero">Genero:</string>
     <string name="AreaMedicaP">Area Medica:</string>
     <string name="EspecialidadP">Especialidad:</string>
-    <string name="FotoPerfilP">Foto Perfil:</string>
     <string name="BTNRegistroP">Registrar Profesional</string>
 
     //SPINNER AREA MEDICA
@@ -73,5 +70,6 @@
         <item>Hombre</item>
         <item>Mujer</item>
     </string-array>
+    <string name="title_activity_centro_salud_google_map">CentroSaludGoogleMap</string>
 
 </resources>

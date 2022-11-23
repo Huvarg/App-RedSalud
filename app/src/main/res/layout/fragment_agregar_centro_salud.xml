@@ -71,25 +71,23 @@
         app:layout_constraintTop_toBottomOf="@+id/etLog" />
 
     <EditText
-        android:id="@+id/etLog"
-        android:textSize="16sp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberSigned"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="@+id/etLat"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
-
-    <EditText
         android:id="@+id/etLat"
-        android:textSize="16sp"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberSigned"
+        android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
         app:layout_constraintStart_toStartOf="@+id/etNombreCentro"
         app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/etLog"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/etLat"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

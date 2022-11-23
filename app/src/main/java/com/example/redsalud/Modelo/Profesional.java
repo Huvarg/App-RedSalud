@@ -4,31 +4,33 @@ import java.io.Serializable;
 
 public class Profesional implements Serializable {
 
-    private String key;
+    private String idProfesional;
     private String ruta;
     private String nombre;
     private String apellido;
     private String especialidad;
     private String areaMedica;
+    private String idCentroMedico;
 
     public Profesional() {
     }
 
-    public Profesional(String key, String ruta, String nombre, String apellido, String especialidad, String areaMedica) {
-        this.key = key;
+    public Profesional(String idProfesional, String ruta, String nombre, String apellido, String especialidad, String areaMedica, String idCentroMedico) {
+        this.idProfesional = idProfesional;
         this.ruta = ruta;
         this.nombre = nombre;
         this.apellido = apellido;
         this.especialidad = especialidad;
         this.areaMedica = areaMedica;
+        this.idCentroMedico = idCentroMedico;
     }
 
-    public String getKey() {
-        return key;
+    public String getIdProfesional() {
+        return idProfesional;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setIdProfesional(String idProfesional) {
+        this.idProfesional = idProfesional;
     }
 
     public String getRuta() {
@@ -69,6 +71,14 @@ public class Profesional implements Serializable {
 
     public void setAreaMedica(String areaMedica) {
         this.areaMedica = areaMedica;
+    }
+
+    public String getIdCentroMedico() {
+        return idCentroMedico;
+    }
+
+    public void setIdCentroMedico(String idCentroMedico) {
+        this.idCentroMedico = idCentroMedico;
     }
 
 }

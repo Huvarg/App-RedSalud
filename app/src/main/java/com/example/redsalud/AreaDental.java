@@ -58,13 +58,14 @@ public class AreaDental extends Fragment {
                 if (snapshot.exists()) {
                     listadoP.clear();
                     for (DataSnapshot ds : snapshot.getChildren()) {
-                        String key = ds.child("key").getValue(String.class);
+                        String idProfesional = ds.child("idProfesional").getValue(String.class);
                         String ruta = ds.child("ruta").getValue(String.class);
                         String nombre = ds.child("nombre").getValue(String.class);
                         String apellido = ds.child("apellido").getValue(String.class);
                         String especialidad = ds.child("especialidad").getValue(String.class);
                         String areaMedica = ds.child("areaMedica").getValue(String.class);
-                        Profesional p = new Profesional(key, ruta, nombre, apellido, especialidad, areaMedica);
+                        String idCentroMedico = ds.child("idCentroMedico").getValue(String.class);
+                        Profesional p = new Profesional(idProfesional, ruta, nombre, apellido, especialidad, areaMedica, idCentroMedico);
                         if (areaMedica.equals("Area Dental")) {
                             listadoP.add(p);
                             listV.setAdapter(adaptadorP);

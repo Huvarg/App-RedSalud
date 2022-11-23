@@ -19,6 +19,9 @@
             android:value="AIzaSyA4rufzGIjRGWjoWraP4J_9wqiwnGBxDCg" />
 
         <activity
+            android:name=".CentroSaludGoogleMap"
+            android:exported="false" />
+        <activity
             android:name=".DetalleProfesional"
             android:exported="false" />
         <activity

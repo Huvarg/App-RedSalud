@@ -1,11 +1,10 @@
 package com.example.redsalud;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,7 +70,6 @@ public class CentroMedicoLista extends Fragment {
                     adaptadorCS.notifyDataSetChanged();
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 System.out.println("Fallo de lectura: " + error.getCode());
@@ -81,18 +79,12 @@ public class CentroMedicoLista extends Fragment {
         listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                CentroSalud c = listadoC.get(position);
-                Bundle datosEnviar = new Bundle();
-                datosEnviar.putString("nombre", c.getNombre());
-                datosEnviar.putDouble("lat", c.getLat());
-                datosEnviar.putDouble("log", c.getLog());
-                Fragment fragmento = new CentroSaludMap();
-                fragmento.setArguments(datosEnviar);
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.contenedor, fragmento);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                CentroSalud cs = listadoC.get(position);
+                Intent intent = new Intent(getActivity(), CentroSaludGoogleMap.class);
+                intent.putExtra("centro-salud-nombre", cs.getNombre());
+                intent.putExtra("centro-salud-lat", cs.getLat());
+                intent.putExtra("centro-salud-log", cs.getLog());
+                startActivity(intent);
             }
         });
         return view;
