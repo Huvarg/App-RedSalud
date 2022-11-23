@@ -19,9 +19,6 @@
             android:value="AIzaSyA4rufzGIjRGWjoWraP4J_9wqiwnGBxDCg" />
 
         <activity
-            android:name=".DetalleNoticia"
-            android:exported="false" />
-        <activity
             android:name=".DetalleProfesional"
             android:exported="false" />
         <activity

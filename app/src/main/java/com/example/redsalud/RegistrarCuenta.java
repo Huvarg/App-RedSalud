@@ -23,10 +23,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrarCuenta extends AppCompatActivity implements View.OnClickListener {
 
+    private ProgressDialog progressDialog;
     //Definir view objetos
     private EditText textNombre, textApellido, textEmail, textPassword;
     private Button btnRegistrar;
-    private ProgressDialog progressDialog;
     //Declaramos un objeto firebaseAuth y databaseReference
     private FirebaseAuth auth;
     private DatabaseReference database;
@@ -82,7 +82,7 @@ public class RegistrarCuenta extends AppCompatActivity implements View.OnClickLi
                         if (task.isSuccessful()) {
                             String id = auth.getCurrentUser().getUid();
                             Usuario u = new Usuario("", nombre, apellido, email, password);
-                            database.child("Usuarios").child(id).setValue(u);
+                            database.child("Usuario").child(id).setValue(u);
                             Toast.makeText(RegistrarCuenta.this, "Se ha registrado con exito, ya puede iniciar sesion", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(RegistrarCuenta.this, MainActivity.class);
                             startActivity(intent);

@@ -4,25 +4,35 @@ import java.io.Serializable;
 
 public class CentroSalud implements Serializable {
 
-    private String nombreCentro;
+    private String key;
+    private String nombre;
     private Double lat;
     private Double log;
 
     public CentroSalud() {
     }
 
-    public CentroSalud(String nombreCentro, Double lat, Double log) {
-        this.nombreCentro = nombreCentro;
+    public CentroSalud(String key, String nombre, Double lat, Double log) {
+        this.key = key;
+        this.nombre = nombre;
         this.lat = lat;
         this.log = log;
     }
 
-    public String getNombreCentro() {
-        return nombreCentro;
+    public String getKey() {
+        return key;
     }
 
-    public void setNombreCentro(String nombreCentro) {
-        this.nombreCentro = nombreCentro;
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Double getLat() {

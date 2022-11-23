@@ -74,7 +74,7 @@ public class Perfil extends Fragment {
             }
         });
 
-        database.child("Usuarios").child(idUser).addValueEventListener(new ValueEventListener() {
+        database.child("Usuario").child(idUser).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
@@ -91,8 +91,10 @@ public class Perfil extends Fragment {
                     nombreUser.setText("Bienvenido: "+nombre+" "+apellido);
                 }
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                System.out.println("Fallo de lectura: " + error.getCode());
             }
         });
     return view;
@@ -108,13 +110,13 @@ public class Perfil extends Fragment {
             filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Toast.makeText(getContext(), "Foto de perfil guardada", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Cambios realizados con exito", Toast.LENGTH_SHORT).show();
                     filePath.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                         @Override
                         public void onComplete(@NonNull Task<Uri> task) {
                             if (task.isSuccessful()) {
                                 Uri downloadUrl = task.getResult();
-                                database.child("Usuarios").child(idUser).child("urlImg").setValue(downloadUrl.toString());
+                                database.child("Usuario").child(idUser).child("urlImg").setValue(downloadUrl.toString());
                             }
                         }
                     });

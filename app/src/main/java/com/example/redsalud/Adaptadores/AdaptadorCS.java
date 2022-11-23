@@ -39,7 +39,7 @@ public class AdaptadorCS extends BaseAdapter {
         view = LayoutInflater.from(contexto).inflate(R.layout.items_listview_cs,null);
         TextView textNombreCentro = (TextView) view.findViewById(R.id.textNombreCentro);
         CentroSalud c = (CentroSalud) getItem(position);
-        textNombreCentro.setText(c.getNombreCentro());
+        textNombreCentro.setText(c.getNombre());
         return view;
     }
 

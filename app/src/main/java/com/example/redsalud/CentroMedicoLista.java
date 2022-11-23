@@ -16,17 +16,17 @@ import android.widget.TextView;
 
 import com.example.redsalud.Adaptadores.AdaptadorCS;
 import com.example.redsalud.Modelo.CentroSalud;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class CentroMedicoLista extends Fragment {
 
-    private FirebaseFirestore firestore;
+    private DatabaseReference database;
     private ListView listV;
     private ArrayList<CentroSalud> listadoC;
 
@@ -53,34 +53,37 @@ public class CentroMedicoLista extends Fragment {
         listV = view.findViewById(R.id.lvCentroMedico);
         AdaptadorCS adaptadorCS = new AdaptadorCS(getContext(), listadoC);
 
-        firestore = FirebaseFirestore.getInstance();
-        firestore.collection("CentroSalud")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            listadoC.clear();
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                String nombre = document.getString("nombre");
-                                Double lat = Double.valueOf(document.getString("lat"));
-                                Double log = Double.valueOf(document.getString("log"));
-                                CentroSalud c = new CentroSalud(nombre, lat, log);
-                                listadoC.add(c);
-                                listV.setAdapter(adaptadorCS);
-                            }
-                        } else {
-                            System.out.println("Error: " + task.getException());
-                        }
+        database = FirebaseDatabase.getInstance().getReference("CentroSalud");
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    listadoC.clear();
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+                        String key = ds.child("key").getValue(String.class);
+                        String nombre = ds.child("nombre").getValue(String.class);
+                        Double lat = ds.child("lat").getValue(Double.class);
+                        Double log = ds.child("log").getValue(Double.class);
+                        CentroSalud c = new CentroSalud (key, nombre, lat, log);
+                        listadoC.add(c);
+                        listV.setAdapter(adaptadorCS);
                     }
-                });
+                    adaptadorCS.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                System.out.println("Fallo de lectura: " + error.getCode());
+            }
+        });
 
         listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 CentroSalud c = listadoC.get(position);
                 Bundle datosEnviar = new Bundle();
-                datosEnviar.putString("nombre", c.getNombreCentro());
+                datosEnviar.putString("nombre", c.getNombre());
                 datosEnviar.putDouble("lat", c.getLat());
                 datosEnviar.putDouble("log", c.getLog());
                 Fragment fragmento = new CentroSaludMap();

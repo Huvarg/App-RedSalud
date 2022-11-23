@@ -13,17 +13,17 @@ import android.widget.ListView;
 import android.widget.Toast;
 import com.example.redsalud.Adaptadores.AdaptadorP;
 import com.example.redsalud.Modelo.Profesional;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
 public class AreaDental extends Fragment {
 
-    private FirebaseFirestore firestore;
+    private DatabaseReference database;
     private Profesional p;
     private ListView listV;
     private ArrayList <Profesional> listadoP;
@@ -51,31 +51,34 @@ public class AreaDental extends Fragment {
         listV = view.findViewById(R.id.listaAreaDental);
         AdaptadorP adaptadorP = new AdaptadorP(getContext(), listadoP);
 
-        firestore = FirebaseFirestore.getInstance();
-        firestore.collection("Profesional")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            listadoP.clear();
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                String ruta = document.getString("ruta");
-                                String nombre = document.getString("nombre");
-                                String apellido = document.getString("apellido");
-                                String especialidad = document.getString("especialidad");
-                                String areaMedica = document.getString("areaMedica");
-                                Profesional p = new Profesional(ruta, nombre, apellido, especialidad, areaMedica);
-                                if (areaMedica.equals("Area Dental")) {
-                                    listadoP.add(p);
-                                    listV.setAdapter(adaptadorP);
-                                }
-                            }
-                        } else {
-                            System.out.println("Error: " + task.getException());
+        database = FirebaseDatabase.getInstance().getReference("Profesional");
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    listadoP.clear();
+                    for (DataSnapshot ds : snapshot.getChildren()) {
+                        String key = ds.child("key").getValue(String.class);
+                        String ruta = ds.child("ruta").getValue(String.class);
+                        String nombre = ds.child("nombre").getValue(String.class);
+                        String apellido = ds.child("apellido").getValue(String.class);
+                        String especialidad = ds.child("especialidad").getValue(String.class);
+                        String areaMedica = ds.child("areaMedica").getValue(String.class);
+                        Profesional p = new Profesional(key, ruta, nombre, apellido, especialidad, areaMedica);
+                        if (areaMedica.equals("Area Dental")) {
+                            listadoP.add(p);
+                            listV.setAdapter(adaptadorP);
                         }
                     }
-                });
+                    adaptadorP.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                System.out.println("Fallo de lectura: " + error.getCode());
+            }
+        });
 
         listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

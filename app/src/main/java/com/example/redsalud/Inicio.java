@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class Inicio extends Fragment {
 
-    private Button icon1, icon2, icon3, icon4, icon5, icon6;
+    private Button icon1, icon2, icon3, icon4;
 
     public  static  Inicio newInstance() {
         return new Inicio();}
@@ -43,9 +43,9 @@ public class Inicio extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedor, AgendarCita.newInstance());
+                transaction.replace(R.id.contenedor, AgregarProfesional.newInstance());
                 transaction.commit();
-                Toast.makeText(getActivity().getApplication(), "Vas a agendar cita", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplication(), "Vas a agregar profesional", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -56,9 +56,9 @@ public class Inicio extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedor, EvaluarSalud.newInstance());
+                transaction.replace(R.id.contenedor, ProfesionalArea.newInstance());
                 transaction.commit();
-                Toast.makeText(getActivity().getApplication(), "Vas a evaluar salud", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplication(), "Vas a listado de profesionales", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -69,9 +69,9 @@ public class Inicio extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedor, CentroMedicoLista.newInstance());
+                transaction.replace(R.id.contenedor, AgregarCentroSalud.newInstance());
                 transaction.commit();
-                Toast.makeText(getActivity().getApplication(), "Vas a centros salud", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplication(), "Vas a agregar centro salud", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -82,35 +82,9 @@ public class Inicio extends Fragment {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedor, Examenes.newInstance());
+                transaction.replace(R.id.contenedor, CentroMedicoLista.newInstance());
                 transaction.commit();
-                Toast.makeText(getActivity().getApplication(), "Vas a examenes", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        icon5 = vista.findViewById(R.id.icon5);
-        icon5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedor, Soporte.newInstance());
-                transaction.commit();
-                Toast.makeText(getActivity().getApplication(), "Vas a soporte", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        icon6 = vista.findViewById(R.id.icon6);
-        icon6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.contenedor, ForoNoticia.newInstance());
-                transaction.commit();
-                Toast.makeText(getActivity().getApplication(), "Vas a noticia", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity().getApplication(), "Vas a centros de salud", Toast.LENGTH_SHORT).show();
             }
         });
         return vista;

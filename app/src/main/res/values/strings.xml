@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">Red Salud</string>
+
     //MAIN
     <string name="iniciarSesion">Iniciar sesion</string>
     <string name="correo">Correo</string>
@@ -8,6 +9,7 @@
     <string name="clave2">Reingrese contraseña</string>
     <string name="cbRecuerdame">Recuerdame</string>
     <string name="BTNIngresar">Iniciar Sesion</string>
+
     //REGISTRO
     <string name="RegistroTitulo">Registro</string>
     <string name="NombreUsuario">Ingrese un nombre</string>
@@ -15,15 +17,18 @@
     <string name="EmailUsuario">Ingrese un email</string>
     <string name="PassUsuario">Ingrese un password</string>
     <string name="BTNRegistro">Registrar Usuario</string>
+
     //BOTONES
     <string name="btnEnviar">Enviar</string>
     <string name="btnAgendarCita">Agendar Cita</string>
     <string name="btnCalcularIMC">Calcular IMC</string>
     <string name="btnGuardarCambios">Guardar Cambios</string>
+
     //BOTTOMBAR
     <string name="inicio">Inicio</string>
     <string name="perfil">Perfil</string>
     <string name="cita">Cita</string>
+
     //MENU LATERAL
     <string name="datosPersonales">Datos Personales</string>
     <string name="agendarCita">Agendar Cita</string>
@@ -32,21 +37,41 @@
     <string name="blog">Blog</string>
     <string name="soporte">Soporte</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
+
     //HEADER
     <string name="correoUsuario">correo@gmail.com</string>
-    //SOPORTE
-    <string name="mensaje2">Mensaje...</string>
-    <string name="email">EMAIL</string>
+
     //DRAWER
     <string name="abrirDrawer">Drawer abierto</string>
     <string name="cerrarDrawer">Drawer cerrado</string>
 
     <string name="areaMedica">Area Medica</string>
     <string name="areaDental">Area Dental</string>
+
     //PERFIL
     <string name="P_nombre">Nombre:</string>
     <string name="P_apellido">Apellido:</string>
     <string name="P_correo">Correo:</string>
     <string name="title_activity_detalle_persona">DetallePersona</string>
+
+    //ADD PROFESIONAL
+    <string name="NombreP">Nombre:</string>
+    <string name="ApellidoP">Apellido:</string>
+    <string name="AreaMedicaP">Area Medica:</string>
+    <string name="EspecialidadP">Especialidad:</string>
+    <string name="FotoPerfilP">Foto Perfil:</string>
+    <string name="BTNRegistroP">Registrar Profesional</string>
+
+    //SPINNER AREA MEDICA
+    <string-array name="areaMedica_array">
+        <item>Area Medica</item>
+        <item>Area Dental</item>
+    </string-array>
+
+    //SPINNER FOTO PERFIL
+    <string-array name="fotoPerfil_array">
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
 
 </resources>
