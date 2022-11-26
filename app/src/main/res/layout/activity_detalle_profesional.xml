@@ -79,7 +79,7 @@
             android:id="@+id/btnEliminar"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="25dp"
             android:text="ELIMINAR"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -130,8 +130,19 @@
             android:id="@+id/btnIrCS"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:text="IR CENTRO SALUD"
+            app:layout_constraintBottom_toTopOf="@+id/btnModificarP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnModificarP"
+            android:onClick="onClick"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="MODIFICAR"
             app:layout_constraintBottom_toTopOf="@+id/btnEliminar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

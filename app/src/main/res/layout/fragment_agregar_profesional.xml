@@ -19,59 +19,34 @@
 
     <TextView
         android:id="@+id/textView5"
-<<<<<<< HEAD
         android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="80dp"
         android:text="@string/NombreP"
-=======
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="80dp"
-        android:text="@string/NombreP"
-        android:textSize="16sp"
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView6"
-<<<<<<< HEAD
         android:textSize="16sp"
-=======
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/ApellidoP"
-<<<<<<< HEAD
-=======
-        android:textSize="16sp"
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView11"
-<<<<<<< HEAD
-        android:textSize="16sp"
-=======
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/AreaMedicaP"
-<<<<<<< HEAD
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-=======
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
 
     <TextView
         android:id="@+id/textView12"
@@ -85,24 +60,6 @@
 
     <TextView
         android:id="@+id/textView13"
-<<<<<<< HEAD
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/FotoPerfilP"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <EditText
-        android:id="@+id/etNombre"
-        android:textSize="16sp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-=======
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -113,52 +70,35 @@
 
     <EditText
         android:id="@+id/etNombre"
+        android:textSize="16sp"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="16sp"
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/etApellido"
-<<<<<<< HEAD
         android:textSize="16sp"
-=======
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-<<<<<<< HEAD
-=======
-        android:textSize="16sp"
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintStart_toStartOf="@+id/etNombre"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <Spinner
         android:id="@+id/spnAreaMedica"
-<<<<<<< HEAD
-        android:textSize="16sp"
-        android:entries="@array/areaMedica_array"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="@+id/etApellido"
-=======
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:entries="@array/areaMedica_array"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView11"
         app:layout_constraintStart_toStartOf="@+id/spnGenero"
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         app:layout_constraintTop_toTopOf="@+id/textView11" />
 
     <EditText
@@ -173,15 +113,6 @@
         app:layout_constraintTop_toTopOf="@+id/textView12" />
 
     <Spinner
-<<<<<<< HEAD
-        android:id="@+id/spnFotoPerfil"
-        android:textSize="16sp"
-        android:entries="@array/fotoPerfil_array"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/etEspecialidad"
-=======
         android:id="@+id/spnGenero"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -189,24 +120,16 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="@+id/etApellido"
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
         app:layout_constraintTop_toTopOf="@+id/textView13" />
 
     <Button
         android:id="@+id/btnRegistroP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="80dp"
         android:text="@string/BTNRegistroP"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
-=======
-        android:layout_marginTop="100dp"
-        android:text="@string/BTNRegistroP"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnCentroMedico" />
 
@@ -216,7 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Centro Medico:"
+        android:text="Centro Salud:"
         app:layout_constraintStart_toStartOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -227,6 +150,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="@+id/etEspecialidad"
-        app:layout_constraintTop_toTopOf="@+id/textView15" />
->>>>>>> 5f573b4 (Version 9: Commit 25/11/22)
+        app:layout_constraintTop_toTopOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

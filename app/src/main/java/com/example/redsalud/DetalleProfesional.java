@@ -23,7 +23,7 @@ public class DetalleProfesional extends AppCompatActivity {
 
     private ImageView url;
     private TextView nombre, especialidad, areaMedica, centroSalud;
-    private Button btnEliminar, btnIr;
+    private Button btnEliminar, btnIr, btnModificarP;
     private Profesional p;
     private DatabaseReference database;
 
@@ -124,6 +124,12 @@ public class DetalleProfesional extends AppCompatActivity {
     //Metodo volver atras
     public void volverAtras(View view) {
         onBackPressed();
+    }
+
+    public void onClick(View view) {
+        Intent intent = new Intent(getApplicationContext(), ActualizarProfesional.class);
+        intent.putExtra("idprofesional", p.getIdProfesional());
+        startActivity(intent);
     }
 
 }
